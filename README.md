@@ -6,20 +6,6 @@ Advent of Code problems tend to take a particular form and so I solve them in a 
 
 Here's how I do it:
 
-### Why Clojure?
-
-- The JVM is fast.
-- The JVM has many libraries.
-- A dynamic language is good for AoC, where safety offered by types isn't worth the loss of development speed.
-- Eval-at-point makes for a interactive 2D REPL experience.
-- The debugger is excellent.
-- `core` is full of fast and well-designed datatypes and functions.
-- Clojure has language features that make it easy to work with maps.
-- Good support for terse anonymous code, which makes exploratory coding ergonomic.
-- High stability means Clojure tooling remains familiar from year to year.
-- The `recur` keyword for stack checking (explained below).
-- LISP macros provide unmatched abstraction capability, though this is not particularly useful here.
-
 ### `recur`
 
 Most AoC problems involve processing a linear file of data in some way, so the spine of my solution is a recursive
@@ -58,6 +44,20 @@ to be fast, that's where they go.
 
 Because of `recur` you don't need to worry about the stack anymore, and the strategy is reduced to finding the correct
 procedure and choosing the correct data structures.
+
+### Why Clojure?
+
+- The JVM is fast.
+- The JVM has many libraries.
+- A dynamic language is good for AoC, where safety offered by types isn't worth the loss of development speed.
+- Eval-at-point makes for a interactive 2D REPL experience.
+- The debugger is excellent.
+- `core` is full of fast and well-designed datatypes and functions.
+- Clojure has language features that make it easy to work with maps.
+- Good support for terse anonymous code, which makes exploratory coding ergonomic.
+- High stability means Clojure tooling remains familiar from year to year.
+- The `recur` keyword for stack checking (explained below).
+- LISP macros provide unmatched abstraction capability, though this is not particularly useful here.
 
 ### That's basically it
 
