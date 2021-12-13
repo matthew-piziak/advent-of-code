@@ -38,10 +38,6 @@
 ;;; ans12-1: 4549
 (count-paths input)
 
-(defnp invalid? [path]
-  (let [freqs (filter (fn [[k v]] (and (small-cave? k) (>= v 2))) (frequencies (s/split path #",")))]
-    (or (some (partial < 2) (vals freqs)) (< 1 (count freqs)))))
-
 (defn filter-small-caves [nexts small-caves]
   (let [vs (set (vals small-caves))
         ks (set (keys small-caves))]
