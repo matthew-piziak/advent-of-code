@@ -41,5 +41,5 @@
 ;;; ex 02-2: 12
 (total-strat-score "example02")
 
-;;; ans 02-2: 12
+;;; ans 02-2: 11186
 (total-strat-score "input02")
