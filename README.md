@@ -2,7 +2,7 @@
 
 ## Framework
 
-Advent of Code problems tend to take a particular form and so I solve them in a particular way.
+[Advent of Code](https://adventofcode.com/) problems tend to take a particular form and so I solve them in a particular way.
 
 Here's how I do it:
 
