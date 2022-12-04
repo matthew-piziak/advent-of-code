@@ -5,7 +5,7 @@
 (def c->n (zipmap "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" (range 1 53)))
 
 (defn intersection-sum [rs]
-  (transduce (map #(->> % (map (partial into #{})) (apply set/intersection) first c->n)) + rs))
+  (transduce (map #(->> % (map set) (apply set/intersection) first c->n)) + rs))
 
 (defn total-shared-priorities [input]
   (->> input u/read-lines (map #(partition (/ (count %) 2) %)) intersection-sum))
