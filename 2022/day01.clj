@@ -14,7 +14,7 @@
 (most-caloric-elf "input01")
 
 (defn top-three-elves [input]
-  (->> input u/read-paras pack->calories sort (take-last 3) (apply +)))
+  (->> input u/read-paras pack->calories (sort-by -) (take 3) (apply +)))
 
 ;;; ex 01-2: 45000
 (top-three-elves "example01")
