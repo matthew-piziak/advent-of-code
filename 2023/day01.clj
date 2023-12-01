@@ -7,10 +7,7 @@
     (str (first digits) (last digits))))
 
 (defn part-one [input]
-  (->> input
-       u/read-lines                             ; read lines
-       (map (comp #(Integer/parseInt %) ->cal)) ; calculate calibration values
-       (apply +)))                              ; sum
+  (->> input u/read-lines (map (comp #(Integer/parseInt %) ->cal)) (apply +)))
 
 ;;; ex 01-1: 142
 (part-one "example01")
@@ -34,11 +31,7 @@
     (str (or (digit-words f) f) (or (digit-words l) l))))
 
 (defn part-two [input]
-  (->>
-   input
-   u/read-lines                              ; read lines
-   (map (comp #(Integer/parseInt %) ->cal2)) ; calculate calibration values
-   (apply +)))                               ; sum
+  (->> input u/read-lines (map (comp #(Integer/parseInt %) ->cal2)) (apply +)))
 
 ;;; ex 01-2: 281
 (part-two "large01")
