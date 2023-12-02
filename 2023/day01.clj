@@ -6,11 +6,8 @@
   (let [digits (re-seq #"\d" line)]
     (str (first digits) (last digits))))
 
-(defn sum-lines [input f]
-  (transduce (map f) + 0 (u/read-lines input)))
-
 (defn part-one [input]
-  (sum-lines input (comp #(Integer/parseInt %) cal)))
+  (u/sum-lines input (map (comp #(Integer/parseInt %) cal))))
 
 ;;; ex 01-1: 142
 (part-one "example01")
@@ -37,7 +34,7 @@
     (str (or (digit-words f) f) (or (digit-words l) l))))
 
 (defn part-two [input]
-  (sum-lines input (comp #(Integer/parseInt %) cal2)))
+  (u/sum-lines input (map (comp #(Integer/parseInt %) cal2))))
 
 ;;; ex 01-2: 281
 (part-two "large01")

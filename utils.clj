@@ -41,3 +41,6 @@
 
 (defn uncommas [s]
   (s/split s #","))
+
+(defn sum-lines [input f]
+  (transduce f + 0 (read-lines input)))
